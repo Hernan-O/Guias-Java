@@ -10,6 +10,7 @@ public class Main {
         switch(ejer.nextInt()){
             case 1 -> ejercicio1();
             case 2 -> ejercicio2();
+            case 3 -> ejercicio3();
         }
     }
     public static void ejercicio1(){
@@ -63,5 +64,20 @@ public class Main {
         prueba.setTotal(500);
         System.out.println("**************************************");
         prueba.muestraFactura();
+    }
+    public static void ejercicio3(){
+        Cliente2 roman = new Cliente2();
+        roman.setGenero('M');
+        roman.setId(1024);
+        roman.setNombre("Roman");
+        roman.mostrarCliente();
+        System.out.println("*************************************");
+        Cuenta cuentaRoman = new Cuenta();
+        cuentaRoman.setCli(roman);
+        cuentaRoman.setBalance(10000);
+        cuentaRoman.setId(1024);
+        cuentaRoman.ingresar(5000);
+        cuentaRoman.retirar(16000);
+        cuentaRoman.mostrarCuenta();
     }
 }
